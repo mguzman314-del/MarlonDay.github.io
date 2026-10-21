@@ -1,153 +1,215 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarlonDay — Fine-Art Photography</title>
-    <style>
-        /* Estética Minimalista Chiaroscuro / Dark */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarlonDay | Fotografía Fine-Art</title>
+  <style>
+    /* ESTILOS GLOBALES - ESTÉTICA CHIAROSCURO */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            background-color: #0a0a0a;
-            color: #e0e0e0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            padding: 40px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+    body {
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #1a1a1a;
-            margin-bottom: 60px;
-        }
+    /* ENCABEZADO Y NAVEGACIÓN */
+    header {
+      text-align: center;
+      padding: 40px 0 60px 0;
+      border-bottom: 1px solid #1a1a1a;
+    }
 
-        h1 {
-            font-size: 1.4rem;
-            font-weight: 300;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #ffffff;
-        }
+    h1 {
+      font-size: 2.2rem;
+      letter-spacing: 4px;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
 
-        nav a {
-            color: #888888;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 0.85rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
+    .subtitle {
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      color: #777777;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
 
-        nav a:hover {
-            color: #ffffff;
-        }
+    nav a {
+      color: #888888;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
-        }
+    nav a:hover {
+      color: #ffffff;
+    }
 
-        .photo-card {
-            background-color: #121212;
-            border: 1px solid #1f1f1f;
-            aspect-ratio: 3 / 2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #444444;
-            font-size: 0.8rem;
-            letter-spacing: 0.05em;
-            transition: border-color 0.3s ease;
-        }
+    /* SECCIONES */
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid #1a1a1a;
+    }
 
-        .photo-card:hover {
-            border-color: #444444;
-        }
+    h2 {
+      font-size: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #555555;
+      margin-bottom: 25px;
+      font-weight: 400;
+    }
 
-        section {
-            margin-bottom: 80px;
-            max-width: 650px;
-        }
+    /* GALERÍA / PROYECTOS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
 
-        h2 {
-            font-size: 0.9rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #666666;
-            margin-bottom: 20px;
-        }
+    .project-card {
+      background: #111111;
+      border: 1px solid #1a1a1a;
+      padding: 20px;
+      transition: border-color 0.3s ease;
+    }
 
-        p {
-            color: #aaaaaa;
-            font-size: 0.95rem;
-            font-weight: 300;
-        }
+    .project-card:hover {
+      border-color: #333333;
+    }
 
-        footer {
-            border-top: 1px solid #1a1a1a;
-            padding-top: 30px;
-            font-size: 0.75rem;
-            color: #444444;
-            display: flex;
-            justify-content: space-between;
-        }
+    .project-card h3 {
+      font-size: 1.1rem;
+      color: #ffffff;
+      font-weight: 300;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
 
-        footer a {
-            color: #666666;
-            text-decoration: none;
-        }
-    </style>
+    .project-card p {
+      font-size: 0.85rem;
+      color: #777777;
+    }
+
+    /* SECCIONES "SOBRE MÍ" Y "CONTACTO" */
+    .about-content h3 {
+      font-size: 1.3rem;
+      color: #ffffff;
+      font-weight: 300;
+      margin-bottom: 15px;
+    }
+
+    .about-content p {
+      color: #aaaaaa;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      max-width: 750px;
+    }
+
+    .contact-info p {
+      font-size: 0.95rem;
+      color: #888888;
+      margin-bottom: 8px;
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border-bottom: 1px solid #444444;
+      padding-bottom: 4px;
+      transition: border-color 0.3s ease, color 0.3s ease;
+    }
+
+    .contact-email:hover {
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    /* PIE DE PÁGINA */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      font-size: 0.75rem;
+      color: #444444;
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>MarlonDay</h1>
-        <nav>
-            <a href="#works">Works</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <!-- ENCABEZADO -->
+  <header>
+    <h1>MarlonDay</h1>
+    <p class="subtitle">Fotografía de Autor & Fine-Art</p>
+    <nav>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#sobre-mi">Sobre Mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-    <main>
-        <section id="works">
-            <h2>Selected Works</h2>
-            <div class="gallery">
-                <div class="photo-card">[ Serie I — Próximamente ]</div>
-                <div class="photo-card">[ Serie II — Próximamente ]</div>
-                <div class="photo-card">[ Serie III — Próximamente ]</div>
-            </div>
-        </section>
+  <!-- SECCIÓN DE PROYECTOS / SERIES -->
+  <section id="proyectos">
+    <h2>Proyectos & Series</h2>
+    <div class="projects-grid">
+      
+      <!-- PROYECTO 1 -->
+      <div class="project-card">
+        <h3>Serie I</h3>
+        <p>Exploración visual enfocada en la luz, el claroscuro y estudio de textura, forma y atmósfera.</p>
+      </div>
 
-        <section id="about">
-            <h2>About</h2>
-            <p>Exploración visual enfocada en la luz, el claroscuro y la composición de autor. Fotografía de formato continuo y estudio de grano, forma y atmósfera contemporánea.</p>
-        </section>
+      <!-- AQUÍ PODRÁS AGREGAR MÁS SERIES MÁS ADELANTE -->
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Morelia, Michoacán, México</p>
-            <p><a href="mailto:contacto@marlonday.com" style="color: #888; text-decoration: none;">contacto@marlonday.com</a></p>
-        </section>
-    </main>
+    </div>
+  </section>
 
-    <footer>
-        <div>© MarlonDay. Todos los derechos reservados.</div>
-        <div>Morelia, MX</div>
-    </footer>
+  <!-- SECCIÓN SOBRE MÍ -->
+  <section id="sobre-mi">
+    <h2>Sobre Mí</h2>
+    <div class="about-content">
+      <h3>Marlon Damian Guzmán Day</h3>
+      <p>
+        Fotógrafo de autor enfocado en la exploración del blanco y negro, el retrato callejero y el dominio de los contrastes intensos de luz. Mi propuesta visual busca capturar atmósferas atemporales, la expresividad del rostro humano y la geometría espontánea de la calle.
+      </p>
+      <p>
+        Mi herramienta principal de creación es la combinación de un cuerpo mirrorless (Sony Alpha 6400) adaptado con ópticas vintage totalmente mecánicas. Este flujo de trabajo me permite buscar la tridimensionalidad, el microcontraste y una textura orgánica única que trasciende lo digital.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE CONTACTO -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div class="contact-info">
+      <p>Morelia, Michoacán, México</p>
+      <p>Para comisiones, venta de obra o proyectos visuales:</p>
+      <a href="mailto:marlondayfotos@gmail.com" class="contact-email">marlondayfotos@gmail.com</a>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>&copy; MarlonDay. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>
